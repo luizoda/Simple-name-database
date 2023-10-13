@@ -1,24 +1,15 @@
-# README
+# Database
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* This code was implemented with Rails 7.0.8
 
-Things you may want to cover:
+* To run the program you must download this folder and run the command rails s
 
-* Ruby version
+* After that you must access the adress given by Puma + "/users"
 
-* System dependencies
+* It is possible to add, edit and delete users
 
-* Configuration
+* There are format checkers for email, phone and cpf
 
-* Database creation
+* It is possible to search users using any of the four parameters
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* It is possible to search users using more than one parameter

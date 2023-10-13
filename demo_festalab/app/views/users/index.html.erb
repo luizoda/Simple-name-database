@@ -1,0 +1,50 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+
+<div id="users">
+
+<%= form_tag(users_path, method: "GET") do %>
+  <%= label_tag :search_by_name %>
+  <%= text_field_tag :search_by_name, params[:search_by_name] %>  
+  <br>
+  <%= label_tag :search_by_email %>
+  <%= text_field_tag :search_by_email, params[:search_by_email] %> 
+  <br>
+  <%= label_tag :search_by_phone %>
+  <%= text_field_tag :search_by_phone, params[:search_by_phone] %>  
+  <br>
+  <%= label_tag :search_by_cpf %>
+  <%= text_field_tag :search_by_cpf, params[:search_by_cpf] %> 
+  <br> 
+  <%= submit_tag "Search" %>
+<% end %>
+
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>CPF</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.cpf %></td>
+        <td><%= link_to "Show user", user %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>
+<%= link_to "New user", new_user_path %>
+</p>
+</div>
